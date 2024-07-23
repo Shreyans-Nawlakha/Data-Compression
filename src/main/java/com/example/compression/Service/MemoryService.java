@@ -46,11 +46,10 @@ public class MemoryService {
             if (!dataMap.containsKey(key)) {
                 String fileName = key + ".txt";
                 File file = new File(fileName);
-                String filePath = file.getPath();
                 if (!file.exists()) {
                     return "Key may be wrong or does not exists";
                 }
-//                String filePathStr = filePath.toAbsolutePath().toString();
+                String filePath = file.getPath();
                 byte[] decompressData = readBytesFromFile(filePath);
                 response = decompressString(decompressData);
             } else {
