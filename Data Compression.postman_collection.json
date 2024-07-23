@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "06b97774-11a5-44d4-9b83-848508b8d93b",
+		"name": "Data Compression",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30082828"
+	},
+	"item": [
+		{
+			"name": "get Memory Compression data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\":\"input1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set Memory Compression data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\":\"input2\",\r\n    \"value\":\"file2 stored\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/set",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"set"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
